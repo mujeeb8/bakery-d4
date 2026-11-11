@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Space+Mono&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #9db8aa;
+  padding: 3vw;
+  color: #39382d;
+  font-family: "Space Mono";
+}
+.paper {
+  min-height: 94vh;
+  background: #fffaf0;
+  background-image: radial-gradient(#e3dacb 0.7px, transparent 0.7px);
+  background-size: 7px 7px;
+  padding: 25px 5vw;
+  box-shadow: 12px 12px #688a7e;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #39382d;
+  padding-bottom: 16px;
+  font-size: 10px;
+}
+header img {
+  width: 53px;
+  height: 53px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+header span {
+  font: 20px "Libre Baskerville";
+  margin-right: auto;
+  margin-left: 12px;
+}
+header a {
+  color: inherit;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 68vh;
+  align-items: center;
+}
+h1 {
+  font: clamp(45px, 7vw, 96px)/0.9 "Libre Baskerville";
+  margin: 20px 0;
+}
+.tag {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+.description {
+  max-width: 330px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+button {
+  margin-top: 24px;
+  background: #ec7559;
+  color: #fffaf0;
+  border: 0;
+  padding: 15px 18px;
+  font: 11px "Space Mono";
+  box-shadow: 4px 4px #39382d;
+}
+.photos {
+  height: 520px;
+  position: relative;
+}
+.photos img {
+  position: absolute;
+  object-fit: cover;
+  border: 10px solid #fffaf0;
+  box-shadow: 2px 3px 10px #746e6255;
+}
+.p1 {
+  width: 47%;
+  height: 60%;
+  top: 8%;
+  left: 8%;
+  transform: rotate(-8deg);
+}
+.p2 {
+  width: 44%;
+  height: 54%;
+  right: 3%;
+  top: 18%;
+  transform: rotate(9deg);
+}
+.p3 {
+  width: 43%;
+  height: 40%;
+  left: 27%;
+  bottom: 2%;
+  transform: rotate(-2deg);
+}
+.photos span {
+  position: absolute;
+  right: 4%;
+  bottom: 2%;
+  font: 28px/1 Caveat;
+  color: #ec7559;
+  transform: rotate(-7deg);
+}
+footer {
+  border-top: 1px solid #39382d;
+  padding-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  line-height: 1.7;
+}
+.scribble {
+  font: 25px/1 Caveat;
+  color: #ec7559;
+  transform: rotate(-5deg);
+}
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+  .paper {
+    padding: 18px 7vw;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+  header a {
+    display: none;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  .photos {
+    height: 400px;
+  }
+  .photos img {
+    border-width: 6px;
+  }
+  footer small {
+    display: none;
+  }
+}
+
+.cake-diary {
+  margin: 0 -5vw;
+  padding: 55px 5vw;
+  background: #f3d8b3;
+  border-top: 1px dashed #39382d;
+  text-align: center;
+  font: 10px "Space Mono";
+  letter-spacing: 0.08em;
+}
+.cake-diary > div {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  margin-top: 25px;
+  padding-bottom: 12px;
+}
+.cake-diary button {
+  position: relative;
+  min-width: 145px;
+  width: 145px;
+  height: 170px;
+  padding: 0;
+  border: 7px solid #fffaf0;
+  box-shadow: 2px 3px 9px #746e6255;
+  transform: rotate(-3deg);
+}
+.cake-diary button:nth-child(even) {
+  transform: rotate(4deg);
+}
+.cake-diary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cake-diary span {
+  position: absolute;
+  right: 7px;
+  bottom: 3px;
+  color: #ec7559;
+  font: 26px Caveat;
+}
+dialog {
+  border: 1px solid #39382d;
+  background: #fffaf0;
+  color: #39382d;
+  max-width: 400px;
+  padding: 45px;
+  font: 11px/1.8 "Space Mono";
+}
+dialog h2 {
+  font: 40px/1 "Libre Baskerville";
+  margin: 15px 0;
+}
+dialog a {
+  color: #39382d;
+  font-size: 10px;
+}
+dialog::backdrop {
+  background: #39382d99;
+}
+.close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: #39382d;
+  font-size: 24px;
+  padding: 5px;
+}

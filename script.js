@@ -22,7 +22,7 @@ document.querySelectorAll(".photos img").forEach((photo, index) =>
 );
 document.body.insertAdjacentHTML(
   "beforeend",
-  `<section class="cake-diary"><p>EL DIARIO DE PASTELES — CADA HORNEADO TIENE UNA HISTORIA</p><div>${cakes.map((image, i) => `<button data-image="${image}"><img src="../assets/${image}" alt="Pastel de Dayi's Sweet ${i + 1}"><span>♡</span></button>`).join("")}</div></section><dialog><button class="close">×</button><p class="tag">TIENES MUY BUEN GUSTO</p><h2>Hagamos tu pastel.</h2><p>Comparte tu ocasión, sabor y fecha con Dayi's Sweet por Instagram.</p><a href="https://www.instagram.com/cakes_bydayi/" target="_blank">MENSAJE A DAYI'S SWEET ↗</a></dialog>`,
+  `<section class="cake-diary"><p>EL DIARIO DE PASTELES — CADA HORNEADO TIENE UNA HISTORIA</p><div>${cakes.map((image, i) => `<button data-image="${image}"><img src="assets/${image}" alt="Pastel de Dayi's Sweet ${i + 1}"><span>♡</span></button>`).join("")}</div></section><dialog><button class="close">×</button><p class="tag">TIENES MUY BUEN GUSTO</p><h2>Hagamos tu pastel.</h2><p>Comparte tu ocasión, sabor y fecha con Dayi's Sweet por Instagram.</p><a href="https://www.instagram.com/cakes_bydayi/" target="_blank">MENSAJE A DAYI'S SWEET ↗</a></dialog>`,
 );
 const orderButton = document.querySelector("main button");
 orderButton.addEventListener("mouseenter", () => {
@@ -39,7 +39,7 @@ document
   .addEventListener("click", () => document.querySelector("dialog").close());
 document.querySelectorAll(".cake-diary button").forEach((button) =>
   button.addEventListener("click", () => {
-    document.querySelector(".p2").src = `../assets/${button.dataset.image}`;
+    document.querySelector(".p2").src = `assets/${button.dataset.image}`;
     document.querySelector("main").scrollIntoView({ behavior: "smooth" });
   }),
 );
